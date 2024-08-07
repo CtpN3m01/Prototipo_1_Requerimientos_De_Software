@@ -1,7 +1,7 @@
 INTEGRANTES:
 - SAYMON PORRAS BRIONES - Carnet: 2023172692 
 - ALEJANDRO 
-- ARMANDO
+- ARMANDO GARCIA PANIAGUA - Carnet: 2020065209
 - NATHANIEL
 
 ACÁ VA - Especificar todo sobre las direcciones donde están los archivos y explicar como es todo.
