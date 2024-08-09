@@ -4,6 +4,8 @@
 
 package main;
 
+import javax.swing.*;
+
 /**
  *
  * @author saimo
@@ -11,6 +13,9 @@ package main;
 public class Prototipo1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        MenuPrincipal f=new MenuPrincipal();
+        f.setBounds(10,10,1400,750);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
