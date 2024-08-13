@@ -30,8 +30,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanelMenuPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1400, 750));
         getContentPane().setLayout(null);
+
+        jPanelMenuPrincipal.setBackground(new java.awt.Color(153, 153, 153));
 
         javax.swing.GroupLayout jPanelMenuPrincipalLayout = new javax.swing.GroupLayout(jPanelMenuPrincipal);
         jPanelMenuPrincipal.setLayout(jPanelMenuPrincipalLayout);
