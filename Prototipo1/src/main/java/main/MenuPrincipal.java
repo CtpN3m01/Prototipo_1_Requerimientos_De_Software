@@ -28,28 +28,47 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelMenuPrincipal = new javax.swing.JPanel();
+        Boton_Configurar_Sistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setPreferredSize(new java.awt.Dimension(1400, 750));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanelMenuPrincipal.setBackground(new java.awt.Color(153, 153, 153));
+        jPanelMenuPrincipal.setBackground(new java.awt.Color(204, 204, 204));
+
+        Boton_Configurar_Sistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesIconos/engranaje-35.png"))); // NOI18N
+        Boton_Configurar_Sistema.setText("Configurar Sistema");
+        Boton_Configurar_Sistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_Configurar_SistemaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelMenuPrincipalLayout = new javax.swing.GroupLayout(jPanelMenuPrincipal);
         jPanelMenuPrincipal.setLayout(jPanelMenuPrincipalLayout);
         jPanelMenuPrincipalLayout.setHorizontalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
+            .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1089, Short.MAX_VALUE))
         );
         jPanelMenuPrincipalLayout.setVerticalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(495, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelMenuPrincipal);
-        jPanelMenuPrincipal.setBounds(0, 0, 1400, 750);
+        getContentPane().add(jPanelMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton_Configurar_SistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_Configurar_SistemaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_Configurar_SistemaActionPerformed
     
     
     /**
@@ -88,6 +107,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Configurar_Sistema;
     private javax.swing.JPanel jPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }

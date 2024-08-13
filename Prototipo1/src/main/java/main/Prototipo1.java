@@ -17,5 +17,6 @@ public class Prototipo1 {
         f.setBounds(10,10,1400,750);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setResizable(false);
     }
 }
