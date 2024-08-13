@@ -40,31 +40,37 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="494" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Boton_Salir" alignment="1" min="-2" pref="376" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="Boton_Iniciar_Programa" min="-2" pref="185" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Boton_Configurar_Sistema" min="-2" pref="185" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="481" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Boton_Iniciar_Programa" min="-2" pref="376" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Component id="Boton_Configurar_Sistema" min="-2" pref="306" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="578" max="-2" attributes="0"/>
+                          <Component id="Boton_Salir" min="-2" pref="184" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="530" max="32767" attributes="0"/>
+                  <EmptySpace pref="543" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="297" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Boton_Iniciar_Programa" alignment="3" min="-2" pref="89" max="-2" attributes="0"/>
-                      <Component id="Boton_Configurar_Sistema" alignment="3" min="-2" pref="89" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="341" max="-2" attributes="0"/>
+                  <Component id="Boton_Iniciar_Programa" min="-2" pref="89" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="Boton_Configurar_Sistema" min="-2" pref="89" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="Boton_Salir" min="-2" pref="91" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
+                  <EmptySpace pref="122" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -73,9 +79,9 @@
         <Component class="javax.swing.JButton" name="Boton_Configurar_Sistema">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dubai Medium" size="18" style="1"/>
+              <Font name="Dubai Medium" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Configurar Sistema"/>
+            <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_Configurar_SistemaActionPerformed"/>
@@ -84,7 +90,7 @@
         <Component class="javax.swing.JButton" name="Boton_Iniciar_Programa">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dubai Medium" size="18" style="1"/>
+              <Font name="Dubai Medium" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Iniciar Programa"/>
           </Properties>

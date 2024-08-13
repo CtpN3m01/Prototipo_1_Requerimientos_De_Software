@@ -8,12 +8,12 @@ package Ventanas;
  *
  * @author saimo
  */
-public class Elevador extends javax.swing.JPanel {
+public class ElevadorPorDentro extends javax.swing.JPanel {
 
     /**
-     * Creates new form Elevador
+     * Creates new form ElevadorPorFuera
      */
-    public Elevador() {
+    public ElevadorPorDentro() {
         initComponents();
     }
 

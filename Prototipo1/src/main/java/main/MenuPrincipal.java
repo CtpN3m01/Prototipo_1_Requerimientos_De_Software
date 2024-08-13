@@ -41,15 +41,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanelMenuPrincipal.setBackground(new java.awt.Color(204, 204, 204));
 
-        Boton_Configurar_Sistema.setFont(new java.awt.Font("Dubai Medium", 1, 18)); // NOI18N
-        Boton_Configurar_Sistema.setText("Configurar Sistema");
+        Boton_Configurar_Sistema.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
+        Boton_Configurar_Sistema.setText("Configuración");
         Boton_Configurar_Sistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_Configurar_SistemaActionPerformed(evt);
             }
         });
 
-        Boton_Iniciar_Programa.setFont(new java.awt.Font("Dubai Medium", 1, 18)); // NOI18N
+        Boton_Iniciar_Programa.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
         Boton_Iniciar_Programa.setText("Iniciar Programa");
         Boton_Iniciar_Programa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -78,25 +78,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanelMenuPrincipalLayout.setHorizontalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
-                .addGap(494, 494, 494)
                 .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Boton_Salir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
-                        .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(530, Short.MAX_VALUE))
+                        .addGap(481, 481, 481)
+                        .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                        .addGap(578, 578, 578)
+                        .addComponent(Boton_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(543, Short.MAX_VALUE))
         );
         jPanelMenuPrincipalLayout.setVerticalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuPrincipalLayout.createSequentialGroup()
-                .addContainerGap(297, Short.MAX_VALUE)
-                .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                .addGap(341, 341, 341)
+                .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Boton_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(261, 261, 261))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanelMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
