@@ -34,6 +34,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanelMenuPrincipal = new javax.swing.JPanel();
         Boton_Configurar_Sistema = new javax.swing.JButton();
         Boton_Iniciar_Programa = new javax.swing.JButton();
+        Boton_Salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,7 +50,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         Boton_Iniciar_Programa.setFont(new java.awt.Font("Dubai Medium", 1, 18)); // NOI18N
-        Boton_Iniciar_Programa.setIcon(new javax.swing.ImageIcon("C:\\Users\\saimo\\Documents\\GitHub\\Prototipo_1_Requerimientos_De_Software\\Prototipo1\\src\\main\\java\\imagenes\\engranaje-35.png")); // NOI18N
         Boton_Iniciar_Programa.setText("Iniciar Programa");
         Boton_Iniciar_Programa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -65,25 +65,38 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        Boton_Salir.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
+        Boton_Salir.setText("Salir");
+        Boton_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelMenuPrincipalLayout = new javax.swing.GroupLayout(jPanelMenuPrincipal);
         jPanelMenuPrincipal.setLayout(jPanelMenuPrincipalLayout);
         jPanelMenuPrincipalLayout.setHorizontalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
-                .addGap(281, 281, 281)
-                .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
-                .addContainerGap(934, Short.MAX_VALUE))
+                .addGap(494, 494, 494)
+                .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Boton_Salir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelMenuPrincipalLayout.createSequentialGroup()
+                        .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(530, Short.MAX_VALUE))
         );
         jPanelMenuPrincipalLayout.setVerticalGroup(
             jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMenuPrincipalLayout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
-                .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(324, 324, 324))
+                .addContainerGap(297, Short.MAX_VALUE)
+                .addGroup(jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Boton_Iniciar_Programa, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Boton_Configurar_Sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Boton_Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(261, 261, 261))
         );
 
         getContentPane().add(jPanelMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -100,12 +113,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_Iniciar_ProgramaActionPerformed
 
     private void Boton_Iniciar_ProgramaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Iniciar_ProgramaMouseEntered
-       Boton_Iniciar_Programa.setIcon(new javax.swing.ImageIcon("C:\\Users\\saimo\\Documents\\GitHub\\Prototipo_1_Requerimientos_De_Software\\Prototipo1\\src\\main\\java\\imagenes\\engranaje-40.png"));
+       //Boton_Iniciar_Programa.setIcon(new javax.swing.ImageIcon("C:\\Users\\saimo\\Documents\\GitHub\\Prototipo_1_Requerimientos_De_Software\\Prototipo1\\src\\main\\java\\imagenes\\engranaje-40.png"));
     }//GEN-LAST:event_Boton_Iniciar_ProgramaMouseEntered
 
     private void Boton_Iniciar_ProgramaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_Iniciar_ProgramaMouseExited
-        Boton_Iniciar_Programa.setIcon(new javax.swing.ImageIcon("C:\\Users\\saimo\\Documents\\GitHub\\Prototipo_1_Requerimientos_De_Software\\Prototipo1\\src\\main\\java\\imagenes\\engranaje-35.png"));
+        //Boton_Iniciar_Programa.setIcon(new javax.swing.ImageIcon("C:\\Users\\saimo\\Documents\\GitHub\\Prototipo_1_Requerimientos_De_Software\\Prototipo1\\src\\main\\java\\imagenes\\engranaje-35.png"));
     }//GEN-LAST:event_Boton_Iniciar_ProgramaMouseExited
+
+    private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_Boton_SalirActionPerformed
     
     private void showJPanel() {
     
@@ -154,6 +171,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton_Configurar_Sistema;
     private javax.swing.JButton Boton_Iniciar_Programa;
+    private javax.swing.JButton Boton_Salir;
     private javax.swing.JPanel jPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }
