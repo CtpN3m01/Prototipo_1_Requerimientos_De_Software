@@ -28,27 +28,56 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelMenuPrincipal = new javax.swing.JPanel();
+        Button_Configurar_Sistema = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1400, 750));
         getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout jPanelMenuPrincipalLayout = new javax.swing.GroupLayout(jPanelMenuPrincipal);
-        jPanelMenuPrincipal.setLayout(jPanelMenuPrincipalLayout);
-        jPanelMenuPrincipalLayout.setHorizontalGroup(
-            jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
-        );
-        jPanelMenuPrincipalLayout.setVerticalGroup(
-            jPanelMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
-        );
+        jPanelMenuPrincipal.setBackground(new java.awt.Color(0, 153, 153));
+        jPanelMenuPrincipal.setLayout(null);
+
+        Button_Configurar_Sistema.setFont(new java.awt.Font("Dubai Medium", 1, 18)); // NOI18N
+        Button_Configurar_Sistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-35.png"))); // NOI18N
+        Button_Configurar_Sistema.setText("Configuración");
+        Button_Configurar_Sistema.setBorderPainted(false);
+        Button_Configurar_Sistema.setContentAreaFilled(false);
+        Button_Configurar_Sistema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Button_Configurar_Sistema.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Button_Configurar_SistemaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Button_Configurar_SistemaMouseExited(evt);
+            }
+        });
+        Button_Configurar_Sistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_Configurar_SistemaActionPerformed(evt);
+            }
+        });
+        jPanelMenuPrincipal.add(Button_Configurar_Sistema);
+        Button_Configurar_Sistema.setBounds(100, 330, 170, 50);
 
         getContentPane().add(jPanelMenuPrincipal);
         jPanelMenuPrincipal.setBounds(0, 0, 1400, 750);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_Configurar_SistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Configurar_SistemaActionPerformed
+        
+    }//GEN-LAST:event_Button_Configurar_SistemaActionPerformed
+
+    private void Button_Configurar_SistemaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_Configurar_SistemaMouseEntered
+        //Cambiar icono a engranaje tamaño 40
+        //Cambiar color de letra a uno más oscuro
+        Button_Configurar_Sitema
+    }//GEN-LAST:event_Button_Configurar_SistemaMouseEntered
+
+    private void Button_Configurar_SistemaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_Configurar_SistemaMouseExited
+        //Cambiar icono a engranaje tamaño 35
+        //Cambiar color de letra a uno más claro
+    }//GEN-LAST:event_Button_Configurar_SistemaMouseExited
     
     
     /**
@@ -87,6 +116,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Button_Configurar_Sistema;
     private javax.swing.JPanel jPanelMenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }
