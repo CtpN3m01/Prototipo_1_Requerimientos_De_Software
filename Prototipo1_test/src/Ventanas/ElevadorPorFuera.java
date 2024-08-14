@@ -4,6 +4,11 @@
  */
 package Ventanas;
 
+import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
+import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
+import static Ventanas.MenuPrincipal.MenuInicioVentana;
+
+
 /**
  *
  * @author saimo
@@ -26,19 +31,88 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        Boton_Subir = new javax.swing.JToggleButton();
+        Boton_Bajar = new javax.swing.JToggleButton();
+        Salir = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(153, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1400, 750));
+        setLayout(null);
+
+        Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30-negro.png"))); // NOI18N
+        Boton_Subir.setBorderPainted(false);
+        Boton_Subir.setContentAreaFilled(false);
+        Boton_Subir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Subir.setFocusPainted(false);
+        Boton_Subir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SubirActionPerformed(evt);
+            }
+        });
+        add(Boton_Subir);
+        Boton_Subir.setBounds(240, 220, 40, 40);
+
+        Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30-negro.png"))); // NOI18N
+        Boton_Bajar.setBorderPainted(false);
+        Boton_Bajar.setContentAreaFilled(false);
+        Boton_Bajar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Bajar.setFocusPainted(false);
+        Boton_Bajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_BajarActionPerformed(evt);
+            }
+        });
+        add(Boton_Bajar);
+        Boton_Bajar.setBounds(240, 270, 40, 40);
+
+        Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
+        Salir.setBorderPainted(false);
+        Salir.setContentAreaFilled(false);
+        Salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Salir.setFocusPainted(false);
+        Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SalirMouseExited(evt);
+            }
+        });
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        add(Salir);
+        Salir.setBounds(10, 10, 40, 40);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_SubirActionPerformed
+
+    private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_BajarActionPerformed
+
+    private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
+        Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-50.png")));
+    }//GEN-LAST:event_SalirMouseEntered
+
+    private void SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseExited
+        Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png")));
+    }//GEN-LAST:event_SalirMouseExited
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        ElevadorPorDentroVentana.setVisible(false);
+        ElevadorPorFueraVentana.setVisible(false);
+        MenuInicioVentana.setVisible(true);
+    }//GEN-LAST:event_SalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton Boton_Bajar;
+    private javax.swing.JToggleButton Boton_Subir;
+    private javax.swing.JButton Salir;
     // End of variables declaration//GEN-END:variables
 }

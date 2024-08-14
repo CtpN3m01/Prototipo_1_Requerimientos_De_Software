@@ -17,7 +17,7 @@ public class Prototipo1_test {
      */
     public static void main(String[] args) {
         MenuPrincipal f=new MenuPrincipal();
-        f.setBounds(10,10,1400,750);
+        f.setBounds(250,150,1400,750);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setResizable(false);
