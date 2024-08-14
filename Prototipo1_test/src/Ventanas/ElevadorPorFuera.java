@@ -34,6 +34,9 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_Subir = new javax.swing.JToggleButton();
         Boton_Bajar = new javax.swing.JToggleButton();
         Salir = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(153, 255, 255));
         setPreferredSize(new java.awt.Dimension(1400, 750));
@@ -44,13 +47,21 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_Subir.setContentAreaFilled(false);
         Boton_Subir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Boton_Subir.setFocusPainted(false);
+        Boton_Subir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Boton_SubirMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                Boton_SubirMouseReleased(evt);
+            }
+        });
         Boton_Subir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_SubirActionPerformed(evt);
             }
         });
         add(Boton_Subir);
-        Boton_Subir.setBounds(240, 220, 40, 40);
+        Boton_Subir.setBounds(940, 430, 40, 40);
 
         Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30-negro.png"))); // NOI18N
         Boton_Bajar.setBorderPainted(false);
@@ -63,7 +74,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
             }
         });
         add(Boton_Bajar);
-        Boton_Bajar.setBounds(240, 270, 40, 40);
+        Boton_Bajar.setBounds(940, 470, 40, 40);
 
         Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
         Salir.setBorderPainted(false);
@@ -85,14 +96,58 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         });
         add(Salir);
         Salir.setBounds(10, 10, 40, 40);
+
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 32, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 32, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        add(jPanel1);
+        jPanel1.setBounds(480, 210, 440, 540);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
-        // TODO add your handling code here:
+        Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30.png")));
     }//GEN-LAST:event_Boton_SubirActionPerformed
 
     private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
-        // TODO add your handling code here:
+        Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30.png")));
     }//GEN-LAST:event_Boton_BajarActionPerformed
 
     private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
@@ -109,10 +164,21 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         MenuInicioVentana.setVisible(true);
     }//GEN-LAST:event_SalirActionPerformed
 
+    private void Boton_SubirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SubirMousePressed
+        
+    }//GEN-LAST:event_Boton_SubirMousePressed
+
+    private void Boton_SubirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SubirMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_SubirMouseReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Boton_Bajar;
     private javax.swing.JToggleButton Boton_Subir;
     private javax.swing.JButton Salir;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
