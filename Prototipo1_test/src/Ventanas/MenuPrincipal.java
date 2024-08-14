@@ -4,6 +4,8 @@
  */
 package Ventanas;
 
+import java.awt.Color;
+
 /**
  *
  * @author saimo
@@ -26,77 +28,142 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        Panel_MenuPrincipal = new javax.swing.JPanel();
+        Boton_Salir = new javax.swing.JButton();
+        Boton_Configuracion = new javax.swing.JButton();
+        Boton_IniciarPrograma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1400, 750));
+        Panel_MenuPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        Panel_MenuPrincipal.setPreferredSize(new java.awt.Dimension(1400, 750));
+        Panel_MenuPrincipal.setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
-        jButton1.setText("Salir");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Boton_Salir.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
+        Boton_Salir.setText("Salir");
+        Boton_Salir.setBorderPainted(false);
+        Boton_Salir.setContentAreaFilled(false);
+        Boton_Salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Salir.setFocusPainted(false);
+        Boton_Salir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                Boton_SalirMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                Boton_SalirMouseExited(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Boton_Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Boton_SalirActionPerformed(evt);
             }
         });
+        Panel_MenuPrincipal.add(Boton_Salir);
+        Boton_Salir.setBounds(50, 510, 150, 68);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(633, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(619, 619, 619))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(566, Short.MAX_VALUE))
-        );
+        Boton_Configuracion.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_Configuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-45.png"))); // NOI18N
+        Boton_Configuracion.setText("Configuración");
+        Boton_Configuracion.setBorderPainted(false);
+        Boton_Configuracion.setContentAreaFilled(false);
+        Boton_Configuracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Configuracion.setFocusPainted(false);
+        Boton_Configuracion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Boton_ConfiguracionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Boton_ConfiguracionMouseExited(evt);
+            }
+        });
+        Boton_Configuracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_ConfiguracionActionPerformed(evt);
+            }
+        });
+        Panel_MenuPrincipal.add(Boton_Configuracion);
+        Boton_Configuracion.setBounds(50, 450, 230, 68);
+
+        Boton_IniciarPrograma.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_IniciarPrograma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/encender-45.png"))); // NOI18N
+        Boton_IniciarPrograma.setText("Iniciar Programa");
+        Boton_IniciarPrograma.setBorderPainted(false);
+        Boton_IniciarPrograma.setContentAreaFilled(false);
+        Boton_IniciarPrograma.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_IniciarPrograma.setDefaultCapable(false);
+        Boton_IniciarPrograma.setFocusPainted(false);
+        Boton_IniciarPrograma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Boton_IniciarProgramaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Boton_IniciarProgramaMouseExited(evt);
+            }
+        });
+        Boton_IniciarPrograma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_IniciarProgramaActionPerformed(evt);
+            }
+        });
+        Panel_MenuPrincipal.add(Boton_IniciarPrograma);
+        Boton_IniciarPrograma.setBounds(50, 390, 250, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Panel_MenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Panel_MenuPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Boton_SalirActionPerformed
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-50.png")));
-    }//GEN-LAST:event_jButton1MouseEntered
+    private void Boton_SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SalirMouseEntered
+        Boton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-50.png")));
+        Boton_Salir.setForeground(Color.darkGray);
+    }//GEN-LAST:event_Boton_SalirMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png")));
-    }//GEN-LAST:event_jButton1MouseExited
+    private void Boton_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SalirMouseExited
+        Boton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png")));
+        Boton_Salir.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Boton_SalirMouseExited
+
+    private void Boton_ConfiguracionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_ConfiguracionMouseEntered
+        Boton_Configuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-50.png")));
+        Boton_Configuracion.setForeground(Color.darkGray);
+    }//GEN-LAST:event_Boton_ConfiguracionMouseEntered
+
+    private void Boton_ConfiguracionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_ConfiguracionMouseExited
+        Boton_Configuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-45.png")));
+        Boton_Configuracion.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Boton_ConfiguracionMouseExited
+
+    private void Boton_ConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ConfiguracionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_ConfiguracionActionPerformed
+
+    private void Boton_IniciarProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_IniciarProgramaActionPerformed
+
+    private void Boton_IniciarProgramaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaMouseEntered
+        Boton_IniciarPrograma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/encender-50.png")));
+        Boton_IniciarPrograma.setForeground(Color.darkGray);
+    }//GEN-LAST:event_Boton_IniciarProgramaMouseEntered
+
+    private void Boton_IniciarProgramaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaMouseExited
+        Boton_IniciarPrograma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/encender-45.png")));
+        Boton_IniciarPrograma.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Boton_IniciarProgramaMouseExited
 
     /**
      * @param args the command line arguments
@@ -134,7 +201,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton Boton_Configuracion;
+    private javax.swing.JButton Boton_IniciarPrograma;
+    private javax.swing.JButton Boton_Salir;
+    private javax.swing.JPanel Panel_MenuPrincipal;
     // End of variables declaration//GEN-END:variables
 }
