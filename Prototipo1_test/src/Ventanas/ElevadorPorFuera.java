@@ -4,6 +4,7 @@
  */
 package Ventanas;
 
+
 import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
 import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
 import static Ventanas.MenuPrincipal.MenuInicioVentana;
@@ -34,9 +35,9 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_Subir = new javax.swing.JToggleButton();
         Boton_Bajar = new javax.swing.JToggleButton();
         Salir = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Ascensor = new javax.swing.JPanel();
+        PuertaDerecha = new javax.swing.JPanel();
+        PuertaIzquierda = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(153, 255, 255));
         setPreferredSize(new java.awt.Dimension(1400, 750));
@@ -97,57 +98,52 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         add(Salir);
         Salir.setBounds(10, 10, 40, 40);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        Ascensor.setLayout(null);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+        PuertaDerecha.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout PuertaDerechaLayout = new javax.swing.GroupLayout(PuertaDerecha);
+        PuertaDerecha.setLayout(PuertaDerechaLayout);
+        PuertaDerechaLayout.setHorizontalGroup(
+            PuertaDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PuertaDerechaLayout.setVerticalGroup(
+            PuertaDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        Ascensor.add(PuertaDerecha);
+        PuertaDerecha.setBounds(220, 0, 220, 540);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+        PuertaIzquierda.setBackground(new java.awt.Color(153, 153, 153));
+
+        javax.swing.GroupLayout PuertaIzquierdaLayout = new javax.swing.GroupLayout(PuertaIzquierda);
+        PuertaIzquierda.setLayout(PuertaIzquierdaLayout);
+        PuertaIzquierdaLayout.setHorizontalGroup(
+            PuertaIzquierdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PuertaIzquierdaLayout.setVerticalGroup(
+            PuertaIzquierdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 540, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        Ascensor.add(PuertaIzquierda);
+        PuertaIzquierda.setBounds(0, 0, 210, 540);
 
-        add(jPanel1);
-        jPanel1.setBounds(480, 210, 440, 540);
+        add(Ascensor);
+        Ascensor.setBounds(480, 210, 440, 540);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
         Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30.png")));
+        cerrarElevador();
     }//GEN-LAST:event_Boton_SubirActionPerformed
 
     private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
         Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30.png")));
+        
     }//GEN-LAST:event_Boton_BajarActionPerformed
 
     private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
@@ -169,16 +165,25 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     }//GEN-LAST:event_Boton_SubirMousePressed
 
     private void Boton_SubirMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SubirMouseReleased
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_Boton_SubirMouseReleased
-
+    
+    private void cerrarElevador(){
+        Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaDerecha);
+        Animacion.Animacion.mover_izquierda(0, -180, 15, 5, PuertaIzquierda);
+    }
+    
+    private void abrirElevador(){
+        Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaDerecha);
+        Animacion.Animacion.mover_izquierda(0, -180, 15, 5, PuertaIzquierda);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Ascensor;
     private javax.swing.JToggleButton Boton_Bajar;
     private javax.swing.JToggleButton Boton_Subir;
+    private javax.swing.JPanel PuertaDerecha;
+    private javax.swing.JPanel PuertaIzquierda;
     private javax.swing.JButton Salir;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
