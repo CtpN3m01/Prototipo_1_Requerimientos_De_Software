@@ -42,6 +42,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         Boton_SOS = new javax.swing.JButton();
         Boton_Cerrar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        ContadorPisos = new javax.swing.JLabel();
         Letrero = new javax.swing.JButton();
         EscanerTarjeta = new javax.swing.JButton();
         Boton_VerAscensorPorFuera = new javax.swing.JButton();
@@ -199,15 +200,21 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
+        ContadorPisos.setBackground(new java.awt.Color(255, 0, 0));
+        ContadorPisos.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        ContadorPisos.setForeground(new java.awt.Color(255, 0, 0));
+        ContadorPisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContadorPisos.setText("S1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(ContadorPisos, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(ContadorPisos, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         add(jPanel2);
@@ -327,6 +334,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     private javax.swing.JButton Boton_S1;
     private javax.swing.JButton Boton_SOS;
     private javax.swing.JButton Boton_VerAscensorPorFuera;
+    private javax.swing.JLabel ContadorPisos;
     private javax.swing.JButton EscanerTarjeta;
     private javax.swing.JButton Letrero;
     private javax.swing.JPanel Panel_Botones;

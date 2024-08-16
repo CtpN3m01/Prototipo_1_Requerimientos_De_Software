@@ -41,8 +41,10 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_Subir = new javax.swing.JToggleButton();
         Boton_Bajar = new javax.swing.JToggleButton();
         jPanel2 = new javax.swing.JPanel();
+        ContadorPisos = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         Boton_VerAscensorPorDentro = new javax.swing.JButton();
+        SelectorDePiso = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1400, 750));
@@ -154,21 +156,28 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         add(jPanel1);
         jPanel1.setBounds(930, 450, 50, 80);
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        ContadorPisos.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        ContadorPisos.setForeground(new java.awt.Color(255, 0, 0));
+        ContadorPisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ContadorPisos.setText("S1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 190, Short.MAX_VALUE)
+            .addComponent(ContadorPisos, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+            .addComponent(ContadorPisos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
         );
 
         add(jPanel2);
-        jPanel2.setBounds(600, 100, 190, 90);
+        jPanel2.setBounds(650, 110, 90, 90);
         add(jSpinner1);
-        jSpinner1.setBounds(20, 250, 38, 26);
+        jSpinner1.setBounds(60, 330, 40, 26);
 
         Boton_VerAscensorPorDentro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorDentro-50.png"))); // NOI18N
         Boton_VerAscensorPorDentro.setBorderPainted(false);
@@ -190,6 +199,12 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         });
         add(Boton_VerAscensorPorDentro);
         Boton_VerAscensorPorDentro.setBounds(930, 200, 60, 60);
+
+        SelectorDePiso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Piso S1", "Piso 1", "Piso 2", "Piso 3" }));
+        SelectorDePiso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SelectorDePiso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add(SelectorDePiso);
+        SelectorDePiso.setBounds(20, 300, 80, 26);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
@@ -254,10 +269,12 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     private javax.swing.JToggleButton Boton_Bajar;
     private javax.swing.JToggleButton Boton_Subir;
     private javax.swing.JButton Boton_VerAscensorPorDentro;
+    private javax.swing.JLabel ContadorPisos;
     private javax.swing.JButton LetreroMaximoPersonas;
     private javax.swing.JPanel PuertaDerecha;
     private javax.swing.JPanel PuertaIzquierda;
     private javax.swing.JButton Salir;
+    private javax.swing.JComboBox<String> SelectorDePiso;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSpinner jSpinner1;

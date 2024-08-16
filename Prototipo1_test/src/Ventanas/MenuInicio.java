@@ -34,11 +34,15 @@ public class MenuInicio extends javax.swing.JPanel {
         Boton_Configuracion = new javax.swing.JButton();
         Boton_Salir = new javax.swing.JButton();
         Boton_IniciarPrograma = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        Integrantes = new javax.swing.JButton();
+        Fondo = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 255, 255));
         setLayout(null);
 
-        Boton_Configuracion.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_Configuracion.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 50)); // NOI18N
+        Boton_Configuracion.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Configuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-45.png"))); // NOI18N
         Boton_Configuracion.setText("Configuración");
         Boton_Configuracion.setBorderPainted(false);
@@ -59,9 +63,10 @@ public class MenuInicio extends javax.swing.JPanel {
             }
         });
         add(Boton_Configuracion);
-        Boton_Configuracion.setBounds(50, 450, 230, 68);
+        Boton_Configuracion.setBounds(470, 410, 490, 68);
 
-        Boton_Salir.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_Salir.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 50)); // NOI18N
+        Boton_Salir.setForeground(new java.awt.Color(255, 255, 255));
         Boton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
         Boton_Salir.setText("Salir");
         Boton_Salir.setBorderPainted(false);
@@ -82,9 +87,10 @@ public class MenuInicio extends javax.swing.JPanel {
             }
         });
         add(Boton_Salir);
-        Boton_Salir.setBounds(50, 510, 150, 68);
+        Boton_Salir.setBounds(570, 490, 290, 68);
 
-        Boton_IniciarPrograma.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 18)); // NOI18N
+        Boton_IniciarPrograma.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 50)); // NOI18N
+        Boton_IniciarPrograma.setForeground(new java.awt.Color(255, 255, 255));
         Boton_IniciarPrograma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/encender-45.png"))); // NOI18N
         Boton_IniciarPrograma.setText("Iniciar Programa");
         Boton_IniciarPrograma.setBorderPainted(false);
@@ -106,7 +112,28 @@ public class MenuInicio extends javax.swing.JPanel {
             }
         });
         add(Boton_IniciarPrograma);
-        Boton_IniciarPrograma.setBounds(50, 390, 250, 60);
+        Boton_IniciarPrograma.setBounds(460, 340, 510, 60);
+
+        jLabel1.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 100)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("SISTEMA DE ELEVADORES");
+        add(jLabel1);
+        jLabel1.setBounds(90, 170, 1250, 130);
+
+        Integrantes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Intregrantes.png"))); // NOI18N
+        Integrantes.setContentAreaFilled(false);
+        Integrantes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Integrantes.setFocusPainted(false);
+        add(Integrantes);
+        Integrantes.setBounds(20, 530, 290, 160);
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoSistemaElevadores.png"))); // NOI18N
+        Fondo.setBorderPainted(false);
+        Fondo.setContentAreaFilled(false);
+        Fondo.setFocusPainted(false);
+        add(Fondo);
+        Fondo.setBounds(-880, -100, 2330, 850);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SalirMouseEntered
@@ -116,7 +143,7 @@ public class MenuInicio extends javax.swing.JPanel {
 
     private void Boton_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SalirMouseExited
         Boton_Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png")));
-        Boton_Salir.setForeground(Color.BLACK);
+        Boton_Salir.setForeground(Color.WHITE);
     }//GEN-LAST:event_Boton_SalirMouseExited
 
     private void Boton_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SalirActionPerformed
@@ -130,7 +157,7 @@ public class MenuInicio extends javax.swing.JPanel {
 
     private void Boton_ConfiguracionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_ConfiguracionMouseExited
         Boton_Configuracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/engranaje-45.png")));
-        Boton_Configuracion.setForeground(Color.BLACK);
+        Boton_Configuracion.setForeground(Color.WHITE);
     }//GEN-LAST:event_Boton_ConfiguracionMouseExited
 
     private void Boton_ConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_ConfiguracionActionPerformed
@@ -144,7 +171,7 @@ public class MenuInicio extends javax.swing.JPanel {
 
     private void Boton_IniciarProgramaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaMouseExited
         Boton_IniciarPrograma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/encender-45.png")));
-        Boton_IniciarPrograma.setForeground(Color.BLACK);
+        Boton_IniciarPrograma.setForeground(Color.WHITE);
     }//GEN-LAST:event_Boton_IniciarProgramaMouseExited
 
     private void Boton_IniciarProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaActionPerformed
@@ -158,5 +185,8 @@ public class MenuInicio extends javax.swing.JPanel {
     private javax.swing.JButton Boton_Configuracion;
     private javax.swing.JButton Boton_IniciarPrograma;
     private javax.swing.JButton Boton_Salir;
+    private javax.swing.JButton Fondo;
+    private javax.swing.JButton Integrantes;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
