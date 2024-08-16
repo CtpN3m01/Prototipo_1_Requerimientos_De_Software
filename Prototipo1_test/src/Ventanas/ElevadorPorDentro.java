@@ -4,6 +4,10 @@
  */
 package Ventanas;
 
+import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
+import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
+import static Ventanas.MenuPrincipal.MenuInicioVentana;
+
 /**
  *
  * @author saimo
@@ -26,7 +30,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        AscensorPanel = new javax.swing.JPanel();
         PuertaAdentro_Izquierda = new javax.swing.JPanel();
         PuertaAdentro_Derecha = new javax.swing.JPanel();
         Panel_Botones = new javax.swing.JPanel();
@@ -40,11 +44,13 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         Letrero = new javax.swing.JButton();
         EscanerTarjeta = new javax.swing.JButton();
+        Boton_VerAscensorPorFuera = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(166, 166, 166));
         setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        AscensorPanel.setBackground(new java.awt.Color(255, 255, 255));
+        AscensorPanel.setLayout(null);
 
         PuertaAdentro_Izquierda.setBackground(new java.awt.Color(217, 217, 217));
 
@@ -56,8 +62,11 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         );
         PuertaAdentro_IzquierdaLayout.setVerticalGroup(
             PuertaAdentro_IzquierdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
+
+        AscensorPanel.add(PuertaAdentro_Izquierda);
+        PuertaAdentro_Izquierda.setBounds(0, 0, 272, 650);
 
         PuertaAdentro_Derecha.setBackground(new java.awt.Color(217, 217, 217));
 
@@ -72,23 +81,11 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(PuertaAdentro_Izquierda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PuertaAdentro_Derecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PuertaAdentro_Izquierda, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PuertaAdentro_Derecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        AscensorPanel.add(PuertaAdentro_Derecha);
+        PuertaAdentro_Derecha.setBounds(278, 0, 272, 650);
 
-        add(jPanel1);
-        jPanel1.setBounds(380, 100, 550, 680);
+        add(AscensorPanel);
+        AscensorPanel.setBounds(380, 100, 550, 650);
 
         Panel_Botones.setBackground(new java.awt.Color(115, 115, 115));
         Panel_Botones.setLayout(null);
@@ -221,7 +218,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         Letrero.setContentAreaFilled(false);
         Letrero.setFocusPainted(false);
         add(Letrero);
-        Letrero.setBounds(80, 100, 220, 140);
+        Letrero.setBounds(50, 50, 220, 140);
 
         EscanerTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DetectorTarjeta.png"))); // NOI18N
         EscanerTarjeta.setBorderPainted(false);
@@ -229,6 +226,27 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         EscanerTarjeta.setFocusPainted(false);
         add(EscanerTarjeta);
         EscanerTarjeta.setBounds(1080, 470, 120, 90);
+
+        Boton_VerAscensorPorFuera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorFuera-50.png"))); // NOI18N
+        Boton_VerAscensorPorFuera.setBorderPainted(false);
+        Boton_VerAscensorPorFuera.setContentAreaFilled(false);
+        Boton_VerAscensorPorFuera.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_VerAscensorPorFuera.setFocusPainted(false);
+        Boton_VerAscensorPorFuera.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Boton_VerAscensorPorFueraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Boton_VerAscensorPorFueraMouseExited(evt);
+            }
+        });
+        Boton_VerAscensorPorFuera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_VerAscensorPorFueraActionPerformed(evt);
+            }
+        });
+        add(Boton_VerAscensorPorFuera);
+        Boton_VerAscensorPorFuera.setBounds(310, 90, 60, 60);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P2ActionPerformed
@@ -245,6 +263,8 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
 
     private void Boton_AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_AbrirActionPerformed
         Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirPrendido.png")));
+        
+        abrirElevador();
     }//GEN-LAST:event_Boton_AbrirActionPerformed
 
     private void Boton_P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P3ActionPerformed
@@ -257,6 +277,8 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
 
     private void Boton_CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_CerrarActionPerformed
         Boton_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarPrendido.png")));
+        cerrarElevador();
+        
     }//GEN-LAST:event_Boton_CerrarActionPerformed
 
     private void Boton_P3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_P3MouseClicked
@@ -270,18 +292,33 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     private void Boton_SOSMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SOSMouseReleased
         Boton_SOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonSOSGrande.png")));
     }//GEN-LAST:event_Boton_SOSMouseReleased
-    
-    private void cerrarElevador(){
-        Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaAdentro_Derecha);
-        Animacion.Animacion.mover_izquierda(0, -180, 15, 5, PuertaAdentro_Izquierda);
-    }
+
+    private void Boton_VerAscensorPorFueraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_VerAscensorPorFueraMouseEntered
+        Boton_VerAscensorPorFuera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorFuera-45.png")));
+    }//GEN-LAST:event_Boton_VerAscensorPorFueraMouseEntered
+
+    private void Boton_VerAscensorPorFueraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_VerAscensorPorFueraMouseExited
+        Boton_VerAscensorPorFuera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorFuera-50.png")));
+    }//GEN-LAST:event_Boton_VerAscensorPorFueraMouseExited
+
+    private void Boton_VerAscensorPorFueraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_VerAscensorPorFueraActionPerformed
+        ElevadorPorDentroVentana.setVisible(false);
+        ElevadorPorFueraVentana.setVisible(true);
+        MenuInicioVentana.setVisible(false);
+    }//GEN-LAST:event_Boton_VerAscensorPorFueraActionPerformed
     
     private void abrirElevador(){
-        Animacion.Animacion.mover_izquierda(412, 220, 15, 5, PuertaAdentro_Derecha);
+        Animacion.Animacion.mover_derecha(275, 525, 15, 5, PuertaAdentro_Derecha);
+        Animacion.Animacion.mover_izquierda(0, -245, 15, 5, PuertaAdentro_Izquierda);
+    }
+    
+    private void cerrarElevador(){
+        Animacion.Animacion.mover_izquierda(525, 280, 13, 5, PuertaAdentro_Derecha);
         Animacion.Animacion.mover_derecha(-180, 0, 15, 5, PuertaAdentro_Izquierda);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AscensorPanel;
     private javax.swing.JButton Boton_Abrir;
     private javax.swing.JButton Boton_Cerrar;
     private javax.swing.JButton Boton_P1;
@@ -289,12 +326,12 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     private javax.swing.JButton Boton_P3;
     private javax.swing.JButton Boton_S1;
     private javax.swing.JButton Boton_SOS;
+    private javax.swing.JButton Boton_VerAscensorPorFuera;
     private javax.swing.JButton EscanerTarjeta;
     private javax.swing.JButton Letrero;
     private javax.swing.JPanel Panel_Botones;
     private javax.swing.JPanel PuertaAdentro_Derecha;
     private javax.swing.JPanel PuertaAdentro_Izquierda;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

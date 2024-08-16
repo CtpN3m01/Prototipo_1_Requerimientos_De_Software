@@ -149,8 +149,8 @@ public class MenuInicio extends javax.swing.JPanel {
 
     private void Boton_IniciarProgramaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_IniciarProgramaActionPerformed
         MenuInicioVentana.setVisible(false);
-        ElevadorPorDentroVentana.setVisible(true);
-        ElevadorPorFueraVentana.setVisible(false);
+        ElevadorPorDentroVentana.setVisible(false);
+        ElevadorPorFueraVentana.setVisible(true);
     }//GEN-LAST:event_Boton_IniciarProgramaActionPerformed
 
 
