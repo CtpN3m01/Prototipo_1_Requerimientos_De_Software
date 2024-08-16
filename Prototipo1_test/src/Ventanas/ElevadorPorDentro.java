@@ -26,21 +26,234 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(102, 0, 102));
+        jPanel1 = new javax.swing.JPanel();
+        PuertaAdentro_1 = new javax.swing.JPanel();
+        PuertaAdentro_2 = new javax.swing.JPanel();
+        Panel_Botones = new javax.swing.JPanel();
+        Boton_P2 = new javax.swing.JButton();
+        Boton_S1 = new javax.swing.JButton();
+        Boton_P1 = new javax.swing.JButton();
+        Boton_P3 = new javax.swing.JButton();
+        Boton_SOS = new javax.swing.JButton();
+        Boton_Close = new javax.swing.JButton();
+        Boton_SOS2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
+        setBackground(new java.awt.Color(166, 166, 166));
+        setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        PuertaAdentro_1.setBackground(new java.awt.Color(217, 217, 217));
+
+        javax.swing.GroupLayout PuertaAdentro_1Layout = new javax.swing.GroupLayout(PuertaAdentro_1);
+        PuertaAdentro_1.setLayout(PuertaAdentro_1Layout);
+        PuertaAdentro_1Layout.setHorizontalGroup(
+            PuertaAdentro_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 272, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+        PuertaAdentro_1Layout.setVerticalGroup(
+            PuertaAdentro_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
         );
+
+        PuertaAdentro_2.setBackground(new java.awt.Color(217, 217, 217));
+
+        javax.swing.GroupLayout PuertaAdentro_2Layout = new javax.swing.GroupLayout(PuertaAdentro_2);
+        PuertaAdentro_2.setLayout(PuertaAdentro_2Layout);
+        PuertaAdentro_2Layout.setHorizontalGroup(
+            PuertaAdentro_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 272, Short.MAX_VALUE)
+        );
+        PuertaAdentro_2Layout.setVerticalGroup(
+            PuertaAdentro_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(PuertaAdentro_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PuertaAdentro_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PuertaAdentro_1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PuertaAdentro_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        add(jPanel1);
+        jPanel1.setBounds(380, 100, 550, 680);
+
+        Panel_Botones.setBackground(new java.awt.Color(115, 115, 115));
+        Panel_Botones.setLayout(null);
+
+        Boton_P2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP2Apagado.png"))); // NOI18N
+        Boton_P2.setBorderPainted(false);
+        Boton_P2.setContentAreaFilled(false);
+        Boton_P2.setFocusPainted(false);
+        Boton_P2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_P2ActionPerformed(evt);
+            }
+        });
+        Panel_Botones.add(Boton_P2);
+        Boton_P2.setBounds(10, 100, 70, 58);
+
+        Boton_S1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonS1Apagado.png"))); // NOI18N
+        Boton_S1.setBorderPainted(false);
+        Boton_S1.setContentAreaFilled(false);
+        Boton_S1.setFocusPainted(false);
+        Boton_S1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_S1ActionPerformed(evt);
+            }
+        });
+        Panel_Botones.add(Boton_S1);
+        Boton_S1.setBounds(10, 240, 70, 58);
+
+        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP1Apagado.png"))); // NOI18N
+        Boton_P1.setBorderPainted(false);
+        Boton_P1.setContentAreaFilled(false);
+        Boton_P1.setFocusPainted(false);
+        Boton_P1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_P1ActionPerformed(evt);
+            }
+        });
+        Panel_Botones.add(Boton_P1);
+        Boton_P1.setBounds(10, 170, 70, 58);
+
+        Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Apagado.png"))); // NOI18N
+        Boton_P3.setBorderPainted(false);
+        Boton_P3.setContentAreaFilled(false);
+        Boton_P3.setFocusPainted(false);
+        Boton_P3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Boton_P3MouseClicked(evt);
+            }
+        });
+        Boton_P3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_P3ActionPerformed(evt);
+            }
+        });
+        Panel_Botones.add(Boton_P3);
+        Boton_P3.setBounds(10, 30, 70, 58);
+
+        add(Panel_Botones);
+        Panel_Botones.setBounds(980, 240, 90, 330);
+
+        Boton_SOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirApagado.png"))); // NOI18N
+        Boton_SOS.setBorderPainted(false);
+        Boton_SOS.setContentAreaFilled(false);
+        Boton_SOS.setFocusPainted(false);
+        Boton_SOS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SOSActionPerformed(evt);
+            }
+        });
+        add(Boton_SOS);
+        Boton_SOS.setBounds(1080, 410, 70, 58);
+
+        Boton_Close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonSOSGrande.png"))); // NOI18N
+        Boton_Close.setBorderPainted(false);
+        Boton_Close.setContentAreaFilled(false);
+        Boton_Close.setFocusPainted(false);
+        Boton_Close.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_CloseActionPerformed(evt);
+            }
+        });
+        add(Boton_Close);
+        Boton_Close.setBounds(1080, 270, 70, 59);
+
+        Boton_SOS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarApagado.png"))); // NOI18N
+        Boton_SOS2.setBorderPainted(false);
+        Boton_SOS2.setContentAreaFilled(false);
+        Boton_SOS2.setFocusPainted(false);
+        Boton_SOS2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SOS2ActionPerformed(evt);
+            }
+        });
+        add(Boton_SOS2);
+        Boton_SOS2.setBounds(1080, 340, 70, 58);
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        add(jPanel2);
+        jPanel2.setBounds(1040, 100, 100, 100);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cartel6Personas.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        add(jButton1);
+        jButton1.setBounds(80, 100, 220, 140);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Boton_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P2ActionPerformed
+        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP2Prendido.png")));
+    }//GEN-LAST:event_Boton_P2ActionPerformed
+
+    private void Boton_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P1ActionPerformed
+        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP1Prendido.png")));
+    }//GEN-LAST:event_Boton_P1ActionPerformed
+
+    private void Boton_S1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_S1ActionPerformed
+        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonS1Prendido.png")));
+    }//GEN-LAST:event_Boton_S1ActionPerformed
+
+    private void Boton_SOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_SOSActionPerformed
+
+    private void Boton_P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P3ActionPerformed
+        Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Prendido.png")));
+    }//GEN-LAST:event_Boton_P3ActionPerformed
+
+    private void Boton_CloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_CloseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_CloseActionPerformed
+
+    private void Boton_SOS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOS2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_SOS2ActionPerformed
+
+    private void Boton_P3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_P3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_P3MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton_Close;
+    private javax.swing.JButton Boton_P1;
+    private javax.swing.JButton Boton_P2;
+    private javax.swing.JButton Boton_P3;
+    private javax.swing.JButton Boton_S1;
+    private javax.swing.JButton Boton_SOS;
+    private javax.swing.JButton Boton_SOS2;
+    private javax.swing.JPanel Panel_Botones;
+    private javax.swing.JPanel PuertaAdentro_1;
+    private javax.swing.JPanel PuertaAdentro_2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
