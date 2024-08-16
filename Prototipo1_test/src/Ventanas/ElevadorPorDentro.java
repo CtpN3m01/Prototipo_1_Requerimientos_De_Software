@@ -34,11 +34,12 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         Boton_S1 = new javax.swing.JButton();
         Boton_P1 = new javax.swing.JButton();
         Boton_P3 = new javax.swing.JButton();
+        Boton_Abrir = new javax.swing.JButton();
         Boton_SOS = new javax.swing.JButton();
-        Boton_Close = new javax.swing.JButton();
-        Boton_SOS2 = new javax.swing.JButton();
+        Boton_Cerrar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(166, 166, 166));
         setLayout(null);
@@ -148,41 +149,49 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         add(Panel_Botones);
         Panel_Botones.setBounds(980, 240, 90, 330);
 
-        Boton_SOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirApagado.png"))); // NOI18N
+        Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirApagado.png"))); // NOI18N
+        Boton_Abrir.setBorderPainted(false);
+        Boton_Abrir.setContentAreaFilled(false);
+        Boton_Abrir.setFocusPainted(false);
+        Boton_Abrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_AbrirActionPerformed(evt);
+            }
+        });
+        add(Boton_Abrir);
+        Boton_Abrir.setBounds(1100, 410, 70, 58);
+
+        Boton_SOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonSOSGrande.png"))); // NOI18N
         Boton_SOS.setBorderPainted(false);
         Boton_SOS.setContentAreaFilled(false);
         Boton_SOS.setFocusPainted(false);
+        Boton_SOS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Boton_SOSMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                Boton_SOSMouseReleased(evt);
+            }
+        });
         Boton_SOS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_SOSActionPerformed(evt);
             }
         });
         add(Boton_SOS);
-        Boton_SOS.setBounds(1080, 410, 70, 58);
+        Boton_SOS.setBounds(1100, 270, 70, 60);
 
-        Boton_Close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonSOSGrande.png"))); // NOI18N
-        Boton_Close.setBorderPainted(false);
-        Boton_Close.setContentAreaFilled(false);
-        Boton_Close.setFocusPainted(false);
-        Boton_Close.addActionListener(new java.awt.event.ActionListener() {
+        Boton_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarApagado.png"))); // NOI18N
+        Boton_Cerrar.setBorderPainted(false);
+        Boton_Cerrar.setContentAreaFilled(false);
+        Boton_Cerrar.setFocusPainted(false);
+        Boton_Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_CloseActionPerformed(evt);
+                Boton_CerrarActionPerformed(evt);
             }
         });
-        add(Boton_Close);
-        Boton_Close.setBounds(1080, 270, 70, 59);
-
-        Boton_SOS2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarApagado.png"))); // NOI18N
-        Boton_SOS2.setBorderPainted(false);
-        Boton_SOS2.setContentAreaFilled(false);
-        Boton_SOS2.setFocusPainted(false);
-        Boton_SOS2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_SOS2ActionPerformed(evt);
-            }
-        });
-        add(Boton_SOS2);
-        Boton_SOS2.setBounds(1080, 340, 70, 58);
+        add(Boton_Cerrar);
+        Boton_Cerrar.setBounds(1100, 340, 70, 58);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -190,15 +199,15 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 90, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 90, Short.MAX_VALUE)
         );
 
         add(jPanel2);
-        jPanel2.setBounds(1040, 100, 100, 100);
+        jPanel2.setBounds(980, 110, 90, 90);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cartel6Personas.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -206,10 +215,17 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         jButton1.setFocusPainted(false);
         add(jButton1);
         jButton1.setBounds(80, 100, 220, 140);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/DetectorTarjeta.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        add(jButton2);
+        jButton2.setBounds(1080, 470, 120, 90);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P2ActionPerformed
-        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP2Prendido.png")));
+        Boton_P2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP2Prendido.png")));
     }//GEN-LAST:event_Boton_P2ActionPerformed
 
     private void Boton_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P1ActionPerformed
@@ -217,42 +233,51 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
     }//GEN-LAST:event_Boton_P1ActionPerformed
 
     private void Boton_S1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_S1ActionPerformed
-        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonS1Prendido.png")));
+        Boton_S1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonS1Prendido.png")));
     }//GEN-LAST:event_Boton_S1ActionPerformed
 
-    private void Boton_SOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOSActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Boton_SOSActionPerformed
+    private void Boton_AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_AbrirActionPerformed
+        Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirPrendido.png")));
+    }//GEN-LAST:event_Boton_AbrirActionPerformed
 
     private void Boton_P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P3ActionPerformed
         Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Prendido.png")));
     }//GEN-LAST:event_Boton_P3ActionPerformed
 
-    private void Boton_CloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_CloseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Boton_CloseActionPerformed
+    private void Boton_SOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOSActionPerformed
+        
+    }//GEN-LAST:event_Boton_SOSActionPerformed
 
-    private void Boton_SOS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOS2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Boton_SOS2ActionPerformed
+    private void Boton_CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_CerrarActionPerformed
+        Boton_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarPrendido.png")));
+    }//GEN-LAST:event_Boton_CerrarActionPerformed
 
     private void Boton_P3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_P3MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_Boton_P3MouseClicked
 
+    private void Boton_SOSMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SOSMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Boton_SOSMousePressed
+
+    private void Boton_SOSMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_SOSMouseReleased
+        Boton_SOS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonSOSPequeño.png")));
+    }//GEN-LAST:event_Boton_SOSMouseReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Boton_Close;
+    private javax.swing.JButton Boton_Abrir;
+    private javax.swing.JButton Boton_Cerrar;
     private javax.swing.JButton Boton_P1;
     private javax.swing.JButton Boton_P2;
     private javax.swing.JButton Boton_P3;
     private javax.swing.JButton Boton_S1;
     private javax.swing.JButton Boton_SOS;
-    private javax.swing.JButton Boton_SOS2;
     private javax.swing.JPanel Panel_Botones;
     private javax.swing.JPanel PuertaAdentro_1;
     private javax.swing.JPanel PuertaAdentro_2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
