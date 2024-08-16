@@ -32,50 +32,19 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Boton_Subir = new javax.swing.JToggleButton();
-        Boton_Bajar = new javax.swing.JToggleButton();
         Salir = new javax.swing.JButton();
         Ascensor = new javax.swing.JPanel();
         PuertaDerecha = new javax.swing.JPanel();
         PuertaIzquierda = new javax.swing.JPanel();
+        LetreroMaximoPersonas = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Boton_Subir = new javax.swing.JToggleButton();
+        Boton_Bajar = new javax.swing.JToggleButton();
+        jPanel2 = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(153, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1400, 750));
         setLayout(null);
-
-        Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30-negro.png"))); // NOI18N
-        Boton_Subir.setBorderPainted(false);
-        Boton_Subir.setContentAreaFilled(false);
-        Boton_Subir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Boton_Subir.setFocusPainted(false);
-        Boton_Subir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Boton_SubirMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                Boton_SubirMouseReleased(evt);
-            }
-        });
-        Boton_Subir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_SubirActionPerformed(evt);
-            }
-        });
-        add(Boton_Subir);
-        Boton_Subir.setBounds(940, 430, 40, 40);
-
-        Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30-negro.png"))); // NOI18N
-        Boton_Bajar.setBorderPainted(false);
-        Boton_Bajar.setContentAreaFilled(false);
-        Boton_Bajar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Boton_Bajar.setFocusPainted(false);
-        Boton_Bajar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton_BajarActionPerformed(evt);
-            }
-        });
-        add(Boton_Bajar);
-        Boton_Bajar.setBounds(940, 470, 40, 40);
 
         Salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-ventana-45.png"))); // NOI18N
         Salir.setBorderPainted(false);
@@ -134,6 +103,68 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
 
         add(Ascensor);
         Ascensor.setBounds(480, 210, 440, 540);
+
+        LetreroMaximoPersonas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MaximaCantidadPersonas.png"))); // NOI18N
+        LetreroMaximoPersonas.setBorderPainted(false);
+        LetreroMaximoPersonas.setContentAreaFilled(false);
+        LetreroMaximoPersonas.setFocusPainted(false);
+        LetreroMaximoPersonas.setFocusable(false);
+        add(LetreroMaximoPersonas);
+        LetreroMaximoPersonas.setBounds(210, 70, 210, 140);
+
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(null);
+
+        Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30-negro.png"))); // NOI18N
+        Boton_Subir.setBorderPainted(false);
+        Boton_Subir.setContentAreaFilled(false);
+        Boton_Subir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Subir.setFocusPainted(false);
+        Boton_Subir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Boton_SubirMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                Boton_SubirMouseReleased(evt);
+            }
+        });
+        Boton_Subir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_SubirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Boton_Subir);
+        Boton_Subir.setBounds(10, 10, 30, 30);
+
+        Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30-negro.png"))); // NOI18N
+        Boton_Bajar.setBorderPainted(false);
+        Boton_Bajar.setContentAreaFilled(false);
+        Boton_Bajar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Boton_Bajar.setFocusPainted(false);
+        Boton_Bajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_BajarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Boton_Bajar);
+        Boton_Bajar.setBounds(10, 40, 30, 30);
+
+        add(jPanel1);
+        jPanel1.setBounds(930, 450, 50, 80);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+        );
+
+        add(jPanel2);
+        jPanel2.setBounds(600, 100, 190, 90);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
@@ -143,7 +174,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
 
     private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
         Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30.png")));
-        
+        abrirElevador();
     }//GEN-LAST:event_Boton_BajarActionPerformed
 
     private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
@@ -174,16 +205,19 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     }
     
     private void abrirElevador(){
-        Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaDerecha);
-        Animacion.Animacion.mover_izquierda(0, -180, 15, 5, PuertaIzquierda);
+        Animacion.Animacion.mover_izquierda(412, 220, 15, 5, PuertaDerecha);
+        Animacion.Animacion.mover_derecha(-180, 0, 15, 5, PuertaIzquierda);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Ascensor;
     private javax.swing.JToggleButton Boton_Bajar;
     private javax.swing.JToggleButton Boton_Subir;
+    private javax.swing.JButton LetreroMaximoPersonas;
     private javax.swing.JPanel PuertaDerecha;
     private javax.swing.JPanel PuertaIzquierda;
     private javax.swing.JButton Salir;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
