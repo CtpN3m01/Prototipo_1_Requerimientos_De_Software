@@ -296,19 +296,19 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         // Crear un temporizador
         Timer timer = new Timer();
         
-        // Definir la tarea que se ejecutará
+        // Logica de los pisos
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
                 String piso="3";
                 ContadorPisos.setText(piso);
                 Funcionamientos.ElevadorEstado.setPisoActual(piso);
-                ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+                ElevadorPorFueraVentana.actualizarContadorPisos();  
                 
             }
         };
         timer.schedule(task, 6000);
-        // Abrir Ascensor
+        // Quitar Presionado
         TimerTask task2 = new TimerTask() {
             @Override
             public void run() {
@@ -317,7 +317,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
             }
         };
         timer.schedule(task2, 8000);
-        // Definir la tarea que se ejecutará
+        // Abrir Ascensor
         TimerTask task3 = new TimerTask() {
             @Override
             public void run() {
@@ -326,7 +326,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
             }
         };
         timer.schedule(task3, 10000);
-                // Definir la tarea que se ejecutará
+                // Cerrar Ascensor
         TimerTask task4 = new TimerTask() {
             @Override
             public void run() {
