@@ -5,6 +5,7 @@
 package Ventanas;
 
 import Funcionamientos.ElevadorEstado;
+
 import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
 import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
 import static Ventanas.MenuPrincipal.MenuInicioVentana;
@@ -211,11 +212,14 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     private void Boton_SubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SubirActionPerformed
         Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30.png")));
         cerrarElevador();
+        ElevadorPorDentroVentana.abrirElevador();
+        
     }//GEN-LAST:event_Boton_SubirActionPerformed
 
     private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
         Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30.png")));
         abrirElevador();
+        ElevadorPorDentroVentana.cerrarElevador();
     }//GEN-LAST:event_Boton_BajarActionPerformed
 
     private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
@@ -256,12 +260,12 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_VerAscensorPorDentro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorDentro-50.png")));
     }//GEN-LAST:event_Boton_VerAscensorPorDentroMouseExited
     
-    private void cerrarElevador(){
+    public void cerrarElevador(){
         Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaDerecha);
         Animacion.Animacion.mover_izquierda(0, -180, 15, 5, PuertaIzquierda);
     }
     
-    private void abrirElevador(){
+    public void abrirElevador(){
         Animacion.Animacion.mover_izquierda(412, 220, 15, 5, PuertaDerecha);
         Animacion.Animacion.mover_derecha(-180, 0, 15, 5, PuertaIzquierda);
     }
