@@ -4,6 +4,11 @@ import Funcionamientos.ElevadorEstado;
 import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
 import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
 import static Ventanas.MenuPrincipal.MenuInicioVentana;
+import static Ventanas.MenuPrincipal.pisosStringList;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class ElevadorPorDentro extends javax.swing.JPanel {
 
@@ -190,7 +195,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         ContadorPisos.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         ContadorPisos.setForeground(new java.awt.Color(255, 0, 0));
         ContadorPisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ContadorPisos.setText("S1");
+        ContadorPisos.setText("1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -270,14 +275,66 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirPrendido.png")));
         abrirElevador();
         ElevadorPorFueraVentana.cerrarElevador();
+        // Crear un temporizador
+        Timer timer = new Timer();
+        
+        // Definir la tarea que se ejecutará
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirApagado.png")));
+                cerrarElevador();
+                ElevadorPorFueraVentana.abrirElevador();
+            }
+        };
+        timer.schedule(task, 6000);
     }//GEN-LAST:event_Boton_AbrirActionPerformed
 
     private void Boton_P3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P3ActionPerformed
-        String piso="3";
-        ContadorPisos.setText(piso);
-        Funcionamientos.ElevadorEstado.setPisoActual(piso);
-        ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        
         Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Prendido.png")));
+        // Crear un temporizador
+        Timer timer = new Timer();
+        
+        // Definir la tarea que se ejecutará
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                String piso="3";
+                ContadorPisos.setText(piso);
+                Funcionamientos.ElevadorEstado.setPisoActual(piso);
+                ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+                
+            }
+        };
+        timer.schedule(task, 6000);
+        // Abrir Ascensor
+        TimerTask task2 = new TimerTask() {
+            @Override
+            public void run() {
+                Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Apagado.png")));
+
+            }
+        };
+        timer.schedule(task2, 8000);
+        // Definir la tarea que se ejecutará
+        TimerTask task3 = new TimerTask() {
+            @Override
+            public void run() {
+                abrirElevador();
+                ElevadorPorFueraVentana.cerrarElevador();
+            }
+        };
+        timer.schedule(task3, 10000);
+                // Definir la tarea que se ejecutará
+        TimerTask task4 = new TimerTask() {
+            @Override
+            public void run() {
+                cerrarElevador();
+                ElevadorPorFueraVentana.abrirElevador();
+            }
+        };
+        timer.schedule(task4, 16000);
     }//GEN-LAST:event_Boton_P3ActionPerformed
 
     private void Boton_SOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOSActionPerformed
@@ -288,6 +345,18 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         Boton_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarPrendido.png")));
         cerrarElevador();
         ElevadorPorFueraVentana.abrirElevador();
+        // Crear un temporizador
+        Timer timer = new Timer();
+        
+        // Definir la tarea que se ejecutará
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                Boton_Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonCerrarApagado.png")));
+
+            }
+        };
+        timer.schedule(task, 6000);
     }//GEN-LAST:event_Boton_CerrarActionPerformed
 
     private void Boton_P3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_P3MouseClicked

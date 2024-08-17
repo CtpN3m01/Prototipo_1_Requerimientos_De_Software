@@ -296,7 +296,7 @@
               <Color blue="0" green="0" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="S1"/>
+            <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
       </SubComponents>

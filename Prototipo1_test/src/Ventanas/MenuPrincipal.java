@@ -7,6 +7,7 @@ package Ventanas;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +19,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public static ElevadorPorFuera ElevadorPorFueraVentana = new ElevadorPorFuera();
     public static ElevadorPorDentro ElevadorPorDentroVentana = new ElevadorPorDentro();
     public static MenuInicio MenuInicioVentana = new MenuInicio();
+    public static ArrayList<String> pisosStringList = new ArrayList<>();
     
     /**
      * Creates new form MenuPrincipal
@@ -27,6 +29,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         iniciarPrograma();
         setIconImage(new ImageIcon(getClass().getResource("../imagenes/elevatorIcon.png")).getImage());
         this.setTitle("Sistema De Elevadores - Grupo 5 - Prototipo_1");
+        pisosStringList.add("S1");
+        pisosStringList.add("1");
+        pisosStringList.add("2");
+        pisosStringList.add("3");
+
     }
 
     /**

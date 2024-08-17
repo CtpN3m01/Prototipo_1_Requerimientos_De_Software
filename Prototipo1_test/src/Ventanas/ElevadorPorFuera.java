@@ -9,7 +9,10 @@ import Funcionamientos.ElevadorEstado;
 import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
 import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
 import static Ventanas.MenuPrincipal.MenuInicioVentana;
+import static Ventanas.MenuPrincipal.pisosStringList;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -163,7 +166,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         ContadorPisos.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         ContadorPisos.setForeground(new java.awt.Color(255, 0, 0));
         ContadorPisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ContadorPisos.setText("S1");
+        ContadorPisos.setText("1");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -202,9 +205,14 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         add(Boton_VerAscensorPorDentro);
         Boton_VerAscensorPorDentro.setBounds(930, 200, 60, 60);
 
-        SelectorDePiso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Piso S1", "Piso 1", "Piso 2", "Piso 3" }));
+        SelectorDePiso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Piso 1", "Piso 2", "Piso 3", "Piso S1" }));
         SelectorDePiso.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SelectorDePiso.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SelectorDePiso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SelectorDePisoActionPerformed(evt);
+            }
+        });
         add(SelectorDePiso);
         SelectorDePiso.setBounds(20, 300, 80, 26);
     }// </editor-fold>//GEN-END:initComponents
@@ -213,13 +221,40 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30.png")));
         cerrarElevador();
         ElevadorPorDentroVentana.abrirElevador();
+        // Crear un temporizador
+        Timer timer = new Timer();
+        
+        // Definir la tarea que se ejecutará
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                Boton_Subir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/arriba-en-círculo-30-negro.png")));
+                abrirElevador();
+                ElevadorPorDentroVentana.cerrarElevador();
+            }
+        };
+        timer.schedule(task, 8000);
+        
         
     }//GEN-LAST:event_Boton_SubirActionPerformed
 
     private void Boton_BajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_BajarActionPerformed
         Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30.png")));
-        abrirElevador();
-        ElevadorPorDentroVentana.cerrarElevador();
+        cerrarElevador();
+        ElevadorPorDentroVentana.abrirElevador();
+        // Crear un temporizador
+        Timer timer = new Timer();
+        
+        // Definir la tarea que se ejecutará
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                Boton_Bajar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/abajo-en-círculo-30-negro.png")));
+                abrirElevador();
+                ElevadorPorDentroVentana.cerrarElevador();
+            }
+        };
+        timer.schedule(task, 8000);
     }//GEN-LAST:event_Boton_BajarActionPerformed
 
     private void SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseEntered
@@ -259,6 +294,10 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     private void Boton_VerAscensorPorDentroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Boton_VerAscensorPorDentroMouseExited
         Boton_VerAscensorPorDentro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorDentro-50.png")));
     }//GEN-LAST:event_Boton_VerAscensorPorDentroMouseExited
+
+    private void SelectorDePisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectorDePisoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SelectorDePisoActionPerformed
     
     public void cerrarElevador(){
         Animacion.Animacion.mover_derecha(220, 412, 15, 5, PuertaDerecha);

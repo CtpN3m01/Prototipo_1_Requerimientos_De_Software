@@ -4,12 +4,14 @@
  */
 package Funcionamientos;
 
+
+
 /**
  *
  * @author alema
  */
 public class ElevadorEstado {
-    private static String pisoActual="S1"; // Piso inicial
+    private static String pisoActual="1"; // Piso inicial
     public static String getPisoActual() {
         return pisoActual;
     }
