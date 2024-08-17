@@ -4,7 +4,7 @@
  */
 package Ventanas;
 
-
+import Funcionamientos.ElevadorEstado;
 import static Ventanas.MenuPrincipal.ElevadorPorDentroVentana;
 import static Ventanas.MenuPrincipal.ElevadorPorFueraVentana;
 import static Ventanas.MenuPrincipal.MenuInicioVentana;
@@ -21,6 +21,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
      */
     public ElevadorPorFuera() {
         initComponents();
+        ContadorPisos.setText(ElevadorEstado.getPisoActual());
     }
 
     /**
@@ -242,6 +243,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
 
     private void Boton_VerAscensorPorDentroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_VerAscensorPorDentroActionPerformed
         ElevadorPorDentroVentana.setVisible(true);
+        ElevadorPorDentroVentana.actualizarContadorPisos(ElevadorEstado.getPisoActual());
         ElevadorPorFueraVentana.setVisible(false);
         MenuInicioVentana.setVisible(false);
     }//GEN-LAST:event_Boton_VerAscensorPorDentroActionPerformed
@@ -263,6 +265,9 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Animacion.Animacion.mover_izquierda(412, 220, 15, 5, PuertaDerecha);
         Animacion.Animacion.mover_derecha(-180, 0, 15, 5, PuertaIzquierda);
     }
+    public void actualizarContadorPisos() {
+    ContadorPisos.setText(Funcionamientos.ElevadorEstado.getPisoActual());
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Ascensor;
