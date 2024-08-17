@@ -5,6 +5,7 @@
 package Ventanas;
 
 import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
@@ -24,6 +25,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         iniciarPrograma();
+        setIconImage(new ImageIcon(getClass().getResource("../imagenes/elevatorIcon.png")).getImage());
+        this.setTitle("Sistema De Elevadores - Grupo 5 - Prototipo_1");
     }
 
     /**
@@ -40,6 +43,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         PanelJFrame.setBackground(new java.awt.Color(204, 204, 204));
+        PanelJFrame.setToolTipText("");
         PanelJFrame.setLayout(null);
         getContentPane().add(PanelJFrame, java.awt.BorderLayout.CENTER);
 
