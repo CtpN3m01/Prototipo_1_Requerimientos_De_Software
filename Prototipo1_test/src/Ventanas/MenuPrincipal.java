@@ -27,7 +27,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         iniciarPrograma();
-        setIconImage(new ImageIcon(getClass().getResource("../imagenes/elevatorIcon.png")).getImage());
+        //setIconImage(new ImageIcon(getClass().getResource("../imagenes/elevatorIcon.png")).getImage());
         this.setTitle("Sistema De Elevadores - Grupo 5 - Prototipo_1");
         pisosStringList.add("S1");
         pisosStringList.add("1");
