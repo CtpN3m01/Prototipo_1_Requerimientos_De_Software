@@ -244,9 +244,10 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
 
     private void Boton_P2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P2ActionPerformed
         String piso="2";
-    ContadorPisos.setText(piso);
-    Funcionamientos.ElevadorEstado.setPisoActual(piso);
-    ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        ContadorPisos.setText(piso);
+        Funcionamientos.ElevadorEstado.setPisoActual(piso);
+        ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        Boton_P2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP2Prendido.png")));
     }//GEN-LAST:event_Boton_P2ActionPerformed
 
     private void Boton_P1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_P1ActionPerformed
@@ -254,6 +255,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         ContadorPisos.setText(piso);
         Funcionamientos.ElevadorEstado.setPisoActual(piso);
         ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        Boton_P1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP1Prendido.png")));
     }//GEN-LAST:event_Boton_P1ActionPerformed
 
     private void Boton_S1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_S1ActionPerformed
@@ -261,11 +263,11 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         ContadorPisos.setText(piso);
         Funcionamientos.ElevadorEstado.setPisoActual(piso);
         ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        Boton_S1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonS1Prendido.png")));
     }//GEN-LAST:event_Boton_S1ActionPerformed
 
     private void Boton_AbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_AbrirActionPerformed
         Boton_Abrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonAbrirPrendido.png")));
-        
         abrirElevador();
     }//GEN-LAST:event_Boton_AbrirActionPerformed
 
@@ -274,6 +276,7 @@ public class ElevadorPorDentro extends javax.swing.JPanel {
         ContadorPisos.setText(piso);
         Funcionamientos.ElevadorEstado.setPisoActual(piso);
         ElevadorPorFueraVentana.actualizarContadorPisos();  // Llama al método en ElevadorPorFuera
+        Boton_P3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BotonP3Prendido.png")));
     }//GEN-LAST:event_Boton_P3ActionPerformed
 
     private void Boton_SOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SOSActionPerformed
