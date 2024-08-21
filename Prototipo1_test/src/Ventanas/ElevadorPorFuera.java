@@ -40,7 +40,10 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
         Salir = new javax.swing.JButton();
         Ascensor = new javax.swing.JPanel();
         PuertaDerecha = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
         PuertaIzquierda = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         LetreroMaximoPersonas = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         Boton_Subir = new javax.swing.JToggleButton();
@@ -78,37 +81,43 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
 
         Ascensor.setLayout(null);
 
-        PuertaDerecha.setBackground(new java.awt.Color(153, 153, 153));
+        PuertaDerecha.setBackground(new java.awt.Color(59, 84, 81));
+        PuertaDerecha.setForeground(new java.awt.Color(59, 84, 81));
+        PuertaDerecha.setLayout(null);
 
-        javax.swing.GroupLayout PuertaDerechaLayout = new javax.swing.GroupLayout(PuertaDerecha);
-        PuertaDerecha.setLayout(PuertaDerechaLayout);
-        PuertaDerechaLayout.setHorizontalGroup(
-            PuertaDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 220, Short.MAX_VALUE)
-        );
-        PuertaDerechaLayout.setVerticalGroup(
-            PuertaDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PuertaAscensor3.jpeg"))); // NOI18N
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setFocusPainted(false);
+        jButton3.setFocusable(false);
+        PuertaDerecha.add(jButton3);
+        jButton3.setBounds(0, 0, 230, 540);
 
         Ascensor.add(PuertaDerecha);
         PuertaDerecha.setBounds(220, 0, 220, 540);
 
-        PuertaIzquierda.setBackground(new java.awt.Color(153, 153, 153));
+        PuertaIzquierda.setBackground(new java.awt.Color(59, 84, 81));
+        PuertaIzquierda.setLayout(null);
 
-        javax.swing.GroupLayout PuertaIzquierdaLayout = new javax.swing.GroupLayout(PuertaIzquierda);
-        PuertaIzquierda.setLayout(PuertaIzquierdaLayout);
-        PuertaIzquierdaLayout.setHorizontalGroup(
-            PuertaIzquierdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        PuertaIzquierdaLayout.setVerticalGroup(
-            PuertaIzquierdaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PuertaAscensor3.jpeg"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setDefaultCapable(false);
+        jButton2.setFocusPainted(false);
+        jButton2.setFocusable(false);
+        PuertaIzquierda.add(jButton2);
+        jButton2.setBounds(0, 0, 210, 540);
 
         Ascensor.add(PuertaIzquierda);
-        PuertaIzquierda.setBounds(0, 0, 210, 540);
+        PuertaIzquierda.setBounds(0, 0, 210, 651);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ascensorPorDentro.jpg"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        Ascensor.add(jButton1);
+        jButton1.setBounds(0, 0, 440, 540);
 
         add(Ascensor);
         Ascensor.setBounds(480, 210, 440, 540);
@@ -307,6 +316,7 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     public void abrirElevador(){
         Animacion.Animacion.mover_izquierda(412, 220, 15, 5, PuertaDerecha);
         Animacion.Animacion.mover_derecha(-180, 0, 15, 5, PuertaIzquierda);
+        
     }
     public void actualizarContadorPisos() {
     ContadorPisos.setText(Funcionamientos.ElevadorEstado.getPisoActual());
@@ -323,6 +333,9 @@ public class ElevadorPorFuera extends javax.swing.JPanel {
     private javax.swing.JPanel PuertaIzquierda;
     private javax.swing.JButton Salir;
     private javax.swing.JComboBox<String> SelectorDePiso;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSpinner jSpinner1;
